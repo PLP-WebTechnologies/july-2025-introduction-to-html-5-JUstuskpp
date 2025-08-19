@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive guide to sustainable gardening practices, eco-friendly techniques, and organic growing methods for beginners and experienced gardeners.">
+    <meta name="keywords" content="sustainable gardening, organic gardening, eco-friendly, composting, permaculture, green living">
+    <meta name="author" content="Green Garden Guide">
+    <title>Sustainable Gardening Guide - Eco-Friendly Growing Tips & Techniques</title>
+    
+    <!-- Open Graph meta tags for social media sharing -->
+    <meta property="og:title" content="Sustainable Gardening Guide">
+    <meta property="og:description" content="Learn sustainable gardening practices and eco-friendly techniques for a healthier garden and planet.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Sustainable Gardening Guide",
+        "description": "A comprehensive guide to sustainable gardening practices and eco-friendly techniques.",
+        "author": {
+            "@type": "Organization",
+            "name": "Green Garden Guide"
+        }
+    }
+    </script>
+
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #2d5a27;
+            --light-green: #4a7c59;
+            --accent-green: #7fb069;
+            --soft-green: #a7d7c5;
+            --cream: #faf7f0;
+            --warm-white: #fefefe;
+            --dark-text: #2c2c2c;
+            --medium-text: #555;
+            --light-text: #777;
+            --border-light: #e8e8e8;
+            --shadow-light: 0 2px 10px rgba(45, 90, 39, 0.08);
+            --shadow-medium: 0 4px 20px rgba(45, 90, 39, 0.12);
+            --shadow-heavy: 0 8px 30px rgba(45, 90, 39, 0.15);
+            --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent-green) 0%, var(--soft-green) 100%);
+            --border-radius: 12px;
+            --border-radius-small: 8px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-text);
+            background: linear-gradient(180deg, var(--cream) 0%, var(--warm-white) 100%);
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--primary-green);
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 1.875rem); }
+        h4 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--medium-text);
+        }
+
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            background: var(--primary-green);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: var(--border-radius-small);
+            z-index: 1000;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="leaves" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23leaves)"/></svg>');
+            opacity: 0.3;
+        }
+
+        header .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        nav li:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            display: block;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        /* Main Content */
+        main {
+            padding: 4rem 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr 300px;
+            }
+        }
+
+        /* Sections */
+        section {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+
+        section:hover {
+            box-shadow: var(--shadow-medium);
+            transform: translateY(-2px);
+        }
+
+        /* Article Styling */
+        article {
+            margin-bottom: 2rem;
+        }
+
+        article:not(:last-child) {
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-light);
+        }
+
+        /* Lists */
+        ul, ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            color: var(--medium-text);
+        }
+
+        li strong {
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        /* Definition Lists */
+        dl {
+            margin-bottom: 1.5rem;
+        }
+
+        dt {
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        dd {
+            margin-left: 1.5rem;
+            color: var(--medium-text);
+            margin-bottom: 0.75rem;
+        }
+
+        /* Figure */
+        figure {
+            margin: 2rem 0;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+        }
+
+        figure img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        figure:hover img {
+            transform: scale(1.02);
+        }
+
+        figcaption {
+            background: var(--gradient-accent);
+            color: white;
+            padding: 1rem;
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Blockquote */
+        blockquote {
+            background: var(--gradient-accent);
+            color: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            position: relative;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        blockquote::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: -1rem;
+            left: 1rem;
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        cite {
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-style: normal;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            margin: 2rem 0;
+        }
+
+        caption {
+            padding: 1rem;
+            background: var(--gradient-primary);
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        th {
+            background: var(--soft-green);
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        tbody tr {
+            transition: var(--transition);
+        }
+
+        tbody tr:hover {
+            background: rgba(127, 176, 105, 0.05);
+        }
+
+        tbody th {
+            background: transparent;
+            font-weight: 500;
+        }
+
+        /* Aside */
+        aside {
+            background: var(--gradient-accent);
+            color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+            box-shadow: var(--shadow-medium);
+        }
+
+        aside h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside li {
+            background: rgba(255, 255, 255, 0.15);
+            margin-bottom: 0.75rem;
+            padding: 0.75rem;
+            border-radius: var(--border-radius-small);
+            color: white;
+            transition: var(--transition);
+        }
+
+        aside li:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateX(5px);
+        }
+
+        /* Resources Section */
+        #resources {
+            background: linear-gradient(135deg, var(--cream) 0%, white 100%);
+        }
+
+        address {
+            background: var(--soft-green);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            font-style: normal;
+            margin: 1rem 0;
+        }
+
+        address strong {
+            color: var(--primary-green);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        address a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        address a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-green);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        footer h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        footer nav ul {
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        footer nav li {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        footer nav li:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        footer small {
+            display: block;
+            text-align: center;
+            margin-top: 2rem;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: var(--soft-green);
+            transition: var(--transition);
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Links */
+        a {
+            color: var(--light-green);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-green);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            nav li {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.75rem 0.5rem;
+            }
+
+            aside {
+                position: static;
+                margin-top: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 1.5rem 0;
+            }
+
+            main {
+                padding: 2rem 0;
+            }
+
+            section {
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary-green: #1a4a1a;
+                --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.3);
+                --border-light: #ccc;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            header, nav, aside, footer nav {
+                display: none;
+            }
+            
+            section {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+            
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        /* Utility classes */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Skip navigation link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <div class="container">
+            <h1>🌱 Green Garden Guide</h1>
+            <p>Your resource for sustainable and eco-friendly gardening</p>
+            
+            <nav role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#introduction" aria-describedby="intro-desc">Introduction</a></li>
+                    <li><a href="#benefits" aria-describedby="benefits-desc">Benefits</a></li>
+                    <li><a href="#techniques" aria-describedby="techniques-desc">Techniques</a></li>
+                    <li><a href="#getting-started" aria-describedby="start-desc">Getting Started</a></li>
+                    <li><a href="#resources" aria-describedby="resources-desc">Resources</a></li>
+                </ul>
+                
+                <!-- Hidden descriptions for screen readers -->
+                <div id="intro-desc" class="sr-only">Learn about sustainable gardening</div>
+                <div id="benefits-desc" class="sr-only">Discover the benefits of eco-friendly gardening</div>
+                <div id="techniques-desc" class="sr-only">Explore sustainable gardening techniques</div>
+                <div id="start-desc" class="sr-only">Get started with your sustainable garden</div>
+                <div id="resources-desc" class="sr-only">Additional resources and tools</div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main id="main-content" role="main">
+            <div class="content-grid">
+                <div>
+                    <article>
+                        <section id="introduction" aria-labelledby="intro-heading">
+                            <h2 id="intro-heading">Introduction to Sustainable Gardening</h2>
+                            <p>
+                                Sustainable gardening is an approach to growing plants that works in harmony with nature, 
+                                minimizing environmental impact while maximizing the health and productivity of your garden. 
+                                This method focuses on building healthy soil, conserving water, and supporting local ecosystems.
+                            </p>
+                            
+                            <figure>
+                                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop&crop=center" alt="A thriving sustainable garden with vegetables, flowers, and composting area" width="600" height="400">
+                                <figcaption>
+                                    A well-designed sustainable garden incorporates diverse plants and natural processes
+                                </figcaption>
+                            </figure>
+                        </section>
+
+                        <section id="benefits" aria-labelledby="benefits-heading">
+                            <h2 id="benefits-heading">Benefits of Sustainable Gardening</h2>
+                            
+                            <h3>Environmental Benefits</h3>
+                            <ul>
+                                <li><strong>Reduced chemical runoff:</strong> Using organic methods prevents harmful chemicals from entering waterways</li>
+                                <li><strong>Biodiversity support:</strong> Native plants and organic practices support local wildlife and pollinators</li>
+                                <li><strong>Carbon sequestration:</strong> Healthy soil stores carbon, helping combat climate change</li>
+                                <li><strong>Water conservation:</strong> Efficient irrigation and mulching reduce water waste</li>
+                            </ul>
+
+                            <h3>Personal Benefits</h3>
+                            <ul>
+                                <li><strong>Healthier produce:</strong> Organic vegetables are free from synthetic pesticides and fertilizers</li>
+                                <li><strong>Cost savings:</strong> Reduced need for expensive chemicals and fertilizers</li>
+                                <li><strong>Physical activity:</strong> Gardening provides excellent low-impact exercise</li>
+                                <li><strong>Mental wellbeing:</strong> Connecting with nature reduces stress and improves mood</li>
+                            </ul>
+                        </section>
+
+                        <section id="techniques" aria-labelledby="techniques-heading">
+                            <h2 id="techniques-heading">Core Sustainable Gardening Techniques</h2>
+
+                            <article>
+                                <h3>Composting</h3>
+                                <p>
+                                    Composting transforms kitchen scraps and yard waste into nutrient-rich soil amendment. 
+                                    This process reduces waste going to landfills while providing your garden with natural fertilizer.
+                                </p>
+                                
+                                <h4>What to Compost</h4>
+                                <dl>
+                                    <dt>Green materials (nitrogen-rich):</dt>
+                                    <dd>Vegetable scraps, fruit peels, coffee grounds, fresh grass clippings</dd>
+                                    
+                                    <dt>Brown materials (carbon-rich):</dt>
+                                    <dd>Dried leaves, newspaper, cardboard, dried grass, small twigs</dd>
+                                </dl>
+                            </article>
+
+                            <article>
+                                <h3>Water Conservation</h3>
+                                <p>
+                                    Efficient water use is crucial for sustainable gardening. Implement these strategies 
+                                    to reduce water consumption while maintaining a healthy garden.
+                                </p>
+                                
+                                <h4>Water-Saving Methods</h4>
+                                <ol>
+                                    <li><strong>Mulching:</strong> Apply organic mulch around plants to retain moisture</li>
+                                    <li><strong>Drip irrigation:</strong> Deliver water directly to plant roots</li>
+                                    <li><strong>Rain collection:</strong> Harvest rainwater in barrels for garden use</li>
+                                    <li><strong>Native plants:</strong> Choose plants adapted to your local climate</li>
+                                    <li><strong>Soil improvement:</strong> Add compost to improve soil water retention</li>
+                                </ol>
+                            </article>
+
+                            <article>
+                                <h3>Natural Pest Management</h3>
+                                <p>
+                                    Sustainable pest control focuses on prevention and natural solutions rather than 
+                                    harmful chemicals. This approach protects beneficial insects while managing pest populations.
+                                </p>
+                                
+                                <blockquote cite="https://example.com/sustainable-farming">
+                                    The best pest control is a healthy ecosystem that naturally keeps pest populations in balance.
+                                    <cite>— Sustainable Farming Institute</cite>
+                                </blockquote>
+                            </article>
+                        </section>
+
+                        <section id="getting-started" aria-labelledby="start-heading">
+                            <h2 id="start-heading">Getting Started with Your Sustainable Garden</h2>
+                            
+                            <h3>Planning Your Garden</h3>
+                            <p>
+                                Before planting, assess your space, soil, and local climate. Consider factors like 
+                                sunlight exposure, water access, and native plant species that will thrive in your area.
+                            </p>
+
+                            <h3>Essential Tools and Supplies</h3>
+                            <table>
+                                <caption>Basic tools needed for sustainable gardening</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Tool</th>
+                                        <th scope="col">Purpose</th>
+                                        <th scope="col">Priority</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Hand trowel</th>
+                                        <td>Planting and weeding</td>
+                                        <td>Essential</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Watering can</th>
+                                        <td>Gentle watering</td>
+                                        <td>Essential</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Compost bin</th>
+                                        <td>Creating organic matter</td>
+                                        <td>Important</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Mulch</th>
+                                        <td>Water retention and weed control</td>
+                                        <td>Important</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Pruning shears</th>
+                                        <td>Plant maintenance</td>
+                                        <td>Helpful</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </article>
+                </div>
+
+                <aside role="complementary" aria-labelledby="tips-heading">
+                    <h2 id="tips-heading">Quick Tips</h2>
+                    <ul>
+                        <li>Start small and expand gradually</li>
+                        <li>Choose plants native to your region</li>
+                        <li>Test your soil before adding amendments</li>
+                        <li>Observe your garden regularly</li>
+                        <li>Keep a garden journal</li>
+                    </ul>
+                </aside>
+            </div>
+        </main>
+
+        <section id="resources" aria-labelledby="resources-heading">
+            <h2 id="resources-heading">Additional Resources</h2>
+            
+            <h3>Recommended Reading</h3>
+            <ul>
+                <li>
+                    <cite>The Well-Tended Perennial Garden</cite> by Tracy DiSabato-Aust
+                    <span aria-label="Book description"> - Comprehensive guide to perennial gardening</span>
+                </li>
+                <li>
+                    <cite>Rodale's Organic Life</cite> Magazine
+                    <span aria-label="Magazine description"> - Monthly publication on organic living</span>
+                </li>
+            </ul>
+
+            <h3>Useful Organizations</h3>
+            <address>
+                <strong>Local Extension Office</strong><br>
+                Contact your county extension office for region-specific advice<br>
+                <a href="https://extension.gov" rel="external">Find your local extension office</a>
+            </address>
+        </section>
+    </div>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <h2>About This Guide</h2>
+            <p>
+                This sustainable gardening guide was created to help gardeners of all levels 
+                adopt eco-friendly practices. Last updated: 
+                <time datetime="2025-08-19">August 19, 2025</time>
+            </p>
+            
+            <nav role="navigation" aria-label="Footer navigation">
+                <ul>
+                    <li><a href="#main-content">Back to top</a></li>
+                    <li><a href="mailto:info@greengardenguide.com">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="sitemap.html">Site Map</a></li>
+                </ul>
+            </nav>
+            
+            <p>
+                <small>
+                    © 2025 Green Garden Guide. Content available under 
+                    <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">
+                        Creative Commons Attribution-ShareAlike 4.0
+                    </a>
+                </small>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
